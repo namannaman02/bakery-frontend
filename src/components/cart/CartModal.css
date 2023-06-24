@@ -1,0 +1,29 @@
+.cart-modal {
+	position: absolute;
+	top: 100%;
+	right: 0;
+	background-color: #fff;
+	padding: 10px;
+	box-shadow: 0 2px 4px
+		rgba(0, 0, 0, 0.2);
+	z-index: 10;
+}
+
+.cart-modal h3 {
+	font-size: 18px;
+	margin-bottom: 10px;
+	color: #333;
+}
+
+.cart-modal ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.cart-modal li {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 5px;
+	color: #666;
+}

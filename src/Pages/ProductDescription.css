@@ -1,0 +1,23 @@
+.product-description {
+  margin: 20px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+.product-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.product-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.product-description {
+  font-size: 16px;
+}
