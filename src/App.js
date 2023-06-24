@@ -36,7 +36,7 @@ const App = () => {
 			image: chocolateCake,
 			description:
 				"Delicious chocolate cake with rich flavor.",
-			price: "259",
+			price: 259,
 		},
 		{
 			id: 2,
@@ -44,7 +44,7 @@ const App = () => {
 			image: blueberryMuffins,
 			description:
 				"Freshly baked blueberry muffins, perfect for breakfast.",
-			price: "259",
+			price: 259,
 		},
 		{
 			id: 3,
@@ -52,7 +52,7 @@ const App = () => {
 			image: redVelvet,
 			description:
 				"Freshly baked blueberry muffins, perfect for breakfast.",
-			price: "259",
+			price: 259,
 		},
 		{
 			id: 4,
@@ -60,7 +60,7 @@ const App = () => {
 			image: macarons,
 			description:
 				"Freshly bakedblueberry muffins, perfect for breakfast.",
-			price: "259",
+			price: 259,
 		},
 	];
 

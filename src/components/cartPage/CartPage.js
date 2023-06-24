@@ -1,53 +1,37 @@
-import React from "react";
-import "./CartPage.css";
+import React from 'react';
+import './CartPage.css';
 
 const CartPage = ({ cartItems }) => {
-	return (
-		<div className="cart-container">
-			<h1>Shopping Cart</h1>
-			{cartItems.length === 0 ? (
-				<p>No items in the cart.</p>
-			) : (
-				<div className="cart-items">
-					{cartItems.map(
-						(item, index) => (
-							<div
-								className="cart-item"
-								key={index}
-							>
-								<img
-									src={item.image}
-									alt={item.name}
-								/>
-								<div className="item-details">
-									<h3>{item.name}</h3>
-									<p>
-										Price: ₹{item.price}
-									</p>
-									<p>
-										Quantity:{" "}
-										{item.quantity}
-									</p>
-								</div>
-							</div>
-						)
-					)}
-				</div>
-			)}
-			{cartItems.length > 0 && (
-				<div className="cart-summary">
-					<h2>Cart Summary</h2>
-					<p>
-						Total Items:{" "}
-						{cartItems.length}
-					</p>
-					<button className="checkout-button">
-						Checkout
-					</button>
-				</div>
-			)}
-		</div>
-	);
+  const totalPrice = cartItems.reduce((total, item) => total + item.price, 0);
+
+  const handleCheckout = () => {
+    // Implement your checkout logic here
+    // For example, you can redirect to a checkout page or perform other actions
+    console.log('Checkout button clicked!');
+  };
+
+  return (
+    <div className="cart-page">
+      <h2 className="page-title">Cart</h2>
+      <div className="cart-items">
+        {cartItems.map((item) => (
+          <div key={item.id} className="cart-item">
+            <img src={item.image} alt={item.name} className="item-image" />
+            <div className="item-details">
+              <h3 className="item-name">{item.name}</h3>
+              <p className="item-price">₹{item.price}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="total-price">
+        <span>Total: ₹{totalPrice.toFixed(2)}</span>
+      </div>
+      <button className="checkout-button" onClick={handleCheckout}>
+        Checkout
+      </button>
+    </div>
+  );
 };
 
 export default CartPage;
